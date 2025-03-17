@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package tgSender;
+
+option go_package = "akurnosov.tgSender.v1;tgSenderv1";
+
+service TgService {
+  // Register registers a new user.
+  rpc Send (SendRequest) returns (SendResponse);
+
+}
+
+message SendRequest {
+  int64 tg_user_id = 1;
+}
+
+message SendResponse {}
