@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package tgSender;
+
+option go_package = "akurnosov.tgSender.v1;tgSenderv1";
+
+service TgService {
+  // Register registers a new user.
+  rpc Send (SendRequest) returns (SendResponse);
+
+}
+
+message SendRequest {
+  int64 tg_user_id = 1;
+  string message = 2;
+  repeated string images = 3;
+  repeated string videos = 4;
+  repeated string files = 5;
+}
+
+message SendResponse {}
