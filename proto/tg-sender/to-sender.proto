@@ -13,9 +13,8 @@ service TgService {
 message SendRequest {
   int64 tg_user_id = 1;
   string message = 2;
-  repeated string images = 3;
-  repeated string videos = 4;
-  repeated string files = 5;
+  string image = 3;
+  string file = 4;
 }
 
 message SendResponse {}
